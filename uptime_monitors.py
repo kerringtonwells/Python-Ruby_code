@@ -45,7 +45,7 @@ def uptime_monitor(host):
     ampersand = "&"
     host = host.replace("\n", "")
     host = host.replace("None", "")
-    cmd = "curl -sL https://dash.ihg.com/api/ipsoft/hostDowntimeUptime.php?hosts=%s%saction=uptime%sduration=100" % (host,ampersand,ampersand) # noqa
+    cmd = "curl -sL host.php?hosts=%s%saction=uptime%sduration=100" % (host,ampersand,ampersand) # noqa
     output = subprocess.Popen(cmd.split(),
                               stdout=subprocess.PIPE,
                               stderr=subprocess.PIPE)
